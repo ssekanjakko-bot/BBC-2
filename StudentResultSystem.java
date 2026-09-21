@@ -68,7 +68,7 @@ public class StudentResultSystem {
                 System.out.println("-----------------------");
             }
 
-        } while (Choice!= 2);
+        } while (mainChoice!= 2);
 
         System.out.println("System closed. Goodbye!");
         sc.close();
