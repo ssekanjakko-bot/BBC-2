@@ -3,7 +3,11 @@
 **Project:** Students results and scholarships checker System
 
 **Group Members:** (ASIIMWE AUDREY 2500714944
-SSEKANJAKO MELVIN 2500715655)
+SSEKANJAKO MELVIN 2500715655
+NAMBI JAUHARAH 2500715466
+NAMANYA NAWAL 2500715459
+SSEGAWA KELVIN VICTOR 2500715648
+)
 
 **Concepts Used:**
 - Ternary Operator - for discount check
