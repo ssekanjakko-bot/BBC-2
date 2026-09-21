@@ -2,7 +2,8 @@
 
 **Project:** Students results and scholarships checker System
 
-**Group Members:** (add your 5 names + reg numbers here)
+**Group Members:** (ASIIMWE AUDREY 2500714944
+SSEKANJAKO MELVIN 2500715655)
 
 **Concepts Used:**
 - Ternary Operator - for discount check
@@ -11,5 +12,5 @@
 - Do-While Loop - for main menu
 
 **How to Run:**
-javac SanelBillingSystem.java
-java SanelBillingSystem
+javac StudentResultSystem.java
+java StudentResultSystem
