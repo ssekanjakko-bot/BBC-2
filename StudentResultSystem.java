@@ -5,7 +5,7 @@ public class StudentResultSystem {
         Scanner sc = new Scanner(System.in);
         int mainChoice;
 
-        // DO-WHILE - Episode 13: Main system loop
+        // DO-WHILE 
         do {
             System.out.println("\n=== BBC 2 STUDENT RESULT SYSTEM ===");
             System.out.println("1. Enter Student Marks");
@@ -24,12 +24,12 @@ public class StudentResultSystem {
                 double[] marks = new double[subjects];
                 double total = 0;
 
-                // FOR LOOP - Episode 11: Collect marks for each subject
+                // FOR LOOP 
                 for (int i = 0; i < subjects; i++) {
                     System.out.print("Enter marks for Subject " + (i+1) + " (0-100): ");
                     double m = sc.nextDouble();
 
-                    // WHILE LOOP - Episode 12: Validate marks
+                    // WHILE LOOP
                     while (m < 0 || m > 100) {
                         System.out.println("Invalid! Marks must be 0-100");
                         System.out.print("Re-enter marks for Subject " + (i+1) + ": ");
@@ -41,7 +41,7 @@ public class StudentResultSystem {
 
                 double average = total / subjects;
 
-                // TERNARY - Episode 10: Used 3 times!
+                // TERNARY 
                 String grade = (average >= 80)? "A - Excellent"
                               : (average >= 60)? "B - Good"
                               : (average >= 50)? "C - Pass"
@@ -49,7 +49,7 @@ public class StudentResultSystem {
 
                 String status = (average >= 50)? "PASSED" : "FAILED";
 
-                // Scholarship: Average >=70 AND total subjects >=4
+                // Scholarship: Average >=70 
                 String scholarship = (average >= 70 && subjects >= 4)? "ELIGIBLE FOR SCHOLARSHIP" : "NOT ELIGIBLE";
 
                 System.out.println("\n----- RESULT SLIP -----");
