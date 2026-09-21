@@ -1,0 +1,76 @@
+import java.util.Scanner;
+
+public class StudentResultSystem {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int mainChoice;
+
+        // DO-WHILE - Episode 13: Main system loop
+        do {
+            System.out.println("\n=== BBC 2 STUDENT RESULT SYSTEM ===");
+            System.out.println("1. Enter Student Marks");
+            System.out.println("2. Exit");
+            System.out.print("Choice: ");
+            mainChoice = sc.nextInt();
+
+            if (mainChoice == 1) {
+                sc.nextLine();
+                System.out.print("Student Name: ");
+                String name = sc.nextLine();
+
+                System.out.print("How many subjects? (3-6): ");
+                int subjects = sc.nextInt();
+
+                double[] marks = new double[subjects];
+                double total = 0;
+
+                // FOR LOOP - Episode 11: Collect marks for each subject
+                for (int i = 0; i < subjects; i++) {
+                    System.out.print("Enter marks for Subject " + (i+1) + " (0-100): ");
+                    double m = sc.nextDouble();
+
+                    // WHILE LOOP - Episode 12: Validate marks
+                    while (m < 0 || m > 100) {
+                        System.out.println("Invalid! Marks must be 0-100");
+                        System.out.print("Re-enter marks for Subject " + (i+1) + ": ");
+                        m = sc.nextDouble();
+                    }
+                    marks[i] = m;
+                    total += m;
+                }
+
+                double average = total / subjects;
+
+                // TERNARY - Episode 10: Used 3 times!
+                String grade = (average >= 80)? "A - Excellent"
+                              : (average >= 60)? "B - Good"
+                              : (average >= 50)? "C - Pass"
+                              : "F - Fail";
+
+                String status = (average >= 50)? "PASSED" : "FAILED";
+
+                // Scholarship: Average >=70 AND total subjects >=4
+                String scholarship = (average >= 70 && subjects >= 4)? "ELIGIBLE FOR SCHOLARSHIP" : "NOT ELIGIBLE";
+
+                System.out.println("\n----- RESULT SLIP -----");
+                System.out.println("Name: " + name);
+
+                // FOR LOOP again to show marks
+                for(int i=0; i<subjects; i++){
+                    System.out.println("Subject " + (i+1) + ": " + marks[i]);
+                }
+
+                System.out.println("Total: " + total);
+                System.out.println("Average: " + average);
+                System.out.println("Grade: " + grade);
+                System.out.println("Status: " + status);
+                System.out.println("Scholarship: " + scholarship);
+                System.out.println("-----------------------");
+            }
+
+        } while (mainChoice!= 2);
+
+        System.out.println("System closed. Goodbye!");
+        sc.close();
+    }
+}
