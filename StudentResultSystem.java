@@ -5,7 +5,7 @@ public class StudentResultSystem {
         Scanner sc = new Scanner(System.in);
         int mainChoice;
 
-        // DO-WHILE 
+        // main menu keeps running until user exits 
         do {
             System.out.println("\n=== BBC 2 STUDENT RESULT SYSTEM ===");
             System.out.println("1. Enter Student Marks");
@@ -24,12 +24,12 @@ public class StudentResultSystem {
                 double[] marks = new double[subjects];
                 double total = 0;
 
-                // FOR LOOP 
+                // loop for entering marks 
                 for (int i = 0; i < subjects; i++) {
                     System.out.print("Enter marks for Subject " + (i+1) + " (0-100): ");
                     double m = sc.nextDouble();
 
-                    // WHILE LOOP
+                    // check if mark are valid 
                     while (m < 0 || m > 100) {
                         System.out.println("Invalid! Marks must be 0-100");
                         System.out.print("Re-enter marks for Subject " + (i+1) + ": ");
@@ -41,7 +41,7 @@ public class StudentResultSystem {
 
                 double average = total / subjects;
 
-                // TERNARY 
+                // calculating grade 
                 String grade = (average >= 80)? "A - Excellent"
                               : (average >= 60)? "B - Good"
                               : (average >= 50)? "C - Pass"
@@ -68,7 +68,7 @@ public class StudentResultSystem {
                 System.out.println("-----------------------");
             }
 
-        } while (mainChoice!= 2);
+        } while (Choice!= 2);
 
         System.out.println("System closed. Goodbye!");
         sc.close();
